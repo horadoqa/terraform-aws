@@ -26,26 +26,37 @@ tree
 │   │       ├── index.html
 │   │       ├── script.js
 │   │       └── style.css
+│   ├── certificado
+│   │   ├── dev
+│   │   │   └── nginx.md
+│   │   ├── nginx.conf
+│   │   ├── prod
+│   │   │   └── nginx.md
+│   │   ├── scp.md
+│   │   └── setup_nginx_https.sh
 │   └── ubuntu
-│       └── install_nginx.yml
+│       ├── inventory.ini
+│       └── nginx.yml
 ├── docs
 │   ├── ansible.md
 │   ├── make.md
-│   ├── makefile-funcionando.md
 │   └── terraform.md
+├── images
+│   ├── horadoqa.png
+│   └── hqa.png
 └── terraform
-    ├── ec2.tf
     ├── env
     │   ├── dev.tfvars
     │   ├── prod.tfvars
     │   └── staging.tfvars
     ├── main.tf
-    ├── sg.tf
+    ├── resource.tf
+    ├── security_group.tf
     ├── terraform.tfstate
     ├── terraform.tfstate.backup
     └── variables.tf
 
-7 directories, 22 files
+11 directories, 29 files
 ```
 
 ## Executando Deploy para Amazon Linux
