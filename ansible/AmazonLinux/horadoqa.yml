@@ -1,11 +1,13 @@
 ---
 - name: Instalar e configurar o NGINX
   hosts: web
+  vars:
+    ansible_python_interpreter: /usr/bin/python3.9
   become: yes
   tasks:
-    - name: Pausar por 60 segundos para garantir que a instância seja criada
+    - name: Pausar por 10 segundos para garantir que a instância seja criada
       pause:
-        seconds: 60
+        seconds: 10
     
     - name: Atualizar o sistema
       dnf:
