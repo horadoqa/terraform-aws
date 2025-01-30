@@ -1,4 +1,4 @@
-# AWS / Terraform / Ansible Makefile
+# AWS / Terraform / Ansible / Makefile
 
 <div align="center">
     <img src="./images/hqa.png" alt="Hora do QA">
