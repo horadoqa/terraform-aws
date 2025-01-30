@@ -48,8 +48,33 @@
         owner: nginx
         group: nginx
         mode: '0644'
+    
+    - name: Copiar o arquivo de configuração do NGINX com HTTPS habilitado
+      copy:
+        src: ../certificado/nginx.conf
+        dest: /home/ec2-user/nginx.conf
+        owner: nginx
+        group: nginx
+        mode: '0644'
 
-    - name: Reiniciar o NGINX para aplicar as mudanças
+    - name: Mover o arquivo de configuração para /etc/nginx
+      command: mv /home/ec2-user/nginx.conf /etc/nginx/nginx.conf
+      become: true
+
+    - name: Copiar o script que gera o certificado HTTPS
+      copy:
+        src: ../certificado/setup_nginx_https.sh
+        dest: /home/ec2-user/setup_nginx_https.sh
+        owner: nginx
+        group: nginx
+        mode: '0755'
+
+    - name: Executar o script de setup do HTTPS
+      command: /home/ec2-user/setup_nginx_https.sh
+      become: true
+
+  handlers:
+    - name: Reiniciar NGINX
       service:
         name: nginx
         state: restarted
