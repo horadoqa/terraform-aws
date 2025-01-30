@@ -1,0 +1,53 @@
+---
+- name: Instalar e configurar o NGINX
+  hosts: web
+  become: yes
+  tasks:
+    - name: Pausar por 60 segundos para garantir que a instância seja criada
+      pause:
+        seconds: 60
+    
+    - name: Atualizar o sistema
+      dnf:
+        name: '*'
+        state: latest
+
+    - name: Instalar o NGINX
+      dnf:
+        name: nginx
+        state: present
+
+    - name: Garantir que o serviço NGINX esteja rodando
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Copiar arquivo index.html para o servidor
+      copy:
+        src: site/index.html
+        dest: /usr/share/nginx/html/index.html
+        owner: nginx
+        group: nginx
+        mode: '0644'
+
+    - name: Copiar arquivo script.js para o servidor
+      copy:
+        src: site/script.js
+        dest: /usr/share/nginx/html/script.js
+        owner: nginx
+        group: nginx
+        mode: '0644'
+
+    - name: Copiar arquivo style.css para o servidor
+      copy:
+        src: site/style.css
+        dest: /usr/share/nginx/html/style.css
+        owner: nginx
+        group: nginx
+        mode: '0644'
+
+    - name: Reiniciar o NGINX para aplicar as mudanças
+      service:
+        name: nginx
+        state: restarted

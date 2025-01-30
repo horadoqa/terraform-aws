@@ -1,0 +1,21 @@
+---
+- name: Instalar e configurar o NGINX
+  hosts: web
+  become: yes
+  tasks:
+    - name: Atualizar o sistema
+      apt:
+        update_cache: yes
+        upgrade: yes
+        cache_valid_time: 3600
+
+    - name: Instalar o NGINX
+      apt:
+        name: nginx
+        state: present
+
+    - name: Garantir que o serviço NGINX esteja rodando
+      service:
+        name: nginx
+        state: started
+        enabled: yes

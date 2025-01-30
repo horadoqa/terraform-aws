@@ -1,0 +1,62 @@
+/* Estilo geral da página */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte mais moderna */
+    background-color: rgb(29, 31, 32); /* Cor de fundo suave */
+    color: #2c3e50; /* Cor do texto */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    height: 100vh; /* Altura total da tela */
+    margin: 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #2980b9; /* Cor mais vibrante para o título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo para o parágrafo */
+p {
+    font-size: 1.5em;
+    color: #34495e;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.6; /* Maior espaçamento entre as linhas */
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px; /* Botão maior e mais espaçoso */
+    border: none;
+    border-radius: 50px; /* Botão com bordas arredondadas */
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave no botão */
+    transition: all 0.3s ease; /* Animação suave na interação */
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Cor de fundo mais escura ao passar o mouse */
+    transform: translateY(-3px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+button:active {
+    transform: translateY(0); /* Ao clicar, o botão "desce" um pouco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reduzida ao clicar */
+}
+
+/* Estilo para o rodapé */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}

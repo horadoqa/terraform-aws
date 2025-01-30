@@ -1,0 +1,20 @@
+---
+- name: Instalar e configurar o NGINX
+  hosts: web
+  become: yes
+  tasks:
+    - name: Atualizar o sistema
+      dnf:
+        name: '*'
+        state: latest
+
+    - name: Instalar o NGINX
+      dnf:
+        name: nginx
+        state: present
+
+    - name: Garantir que o serviço NGINX esteja rodando
+      service:
+        name: nginx
+        state: started
+        enabled: yes
