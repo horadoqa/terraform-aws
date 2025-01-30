@@ -1,7 +1,3 @@
-Claro! Aqui está uma versão mais fluida e organizada da sua documentação:
-
----
-
 # Ansible
 
 ## Instalação

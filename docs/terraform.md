@@ -1,7 +1,3 @@
-Claro! Aqui está uma versão melhorada e mais detalhada da sua documentação:
-
----
-
 # Terraform
 
 ## Instalação no Linux

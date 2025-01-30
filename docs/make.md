@@ -1,7 +1,3 @@
-Claro! Aqui está uma versão ainda mais completa da documentação, incluindo a importância de usar o Makefile:
-
----
-
 # Como usar o Makefile
 
 O **Makefile** é uma ferramenta que automatiza tarefas repetitivas e complexas de forma simples e eficiente. Ao usá-lo, você garante que todas as etapas do processo, como instalação de dependências, execução de scripts ou deploy, sejam feitas de maneira consistente e padronizada, reduzindo erros e economizando tempo.
@@ -20,7 +16,12 @@ O Makefile proporciona diversas vantagens, como:
 Para realizar o deploy para uma instância **Amazon Linux**, basta executar o comando:
 
 ```bash
-make deploy-amz
+make menu
+
+Escolha uma opção:
+1. Criar infraestrutura (Deploy)
+2. Destruir infraestrutura
+3. Sair
 ```
 
 Este comando irá:
