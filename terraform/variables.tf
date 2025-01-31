@@ -17,7 +17,7 @@ variable "instance_type" {
 }
 
 variable "number_instances" {
-  type        = number
+  type = number
   # default     = 1
   description = "Numero de instancias"
 }

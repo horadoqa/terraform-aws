@@ -77,3 +77,24 @@ terraform destroy -auto-approve
 
 Assim como no `apply`, o `-auto-approve` permite que a destruição aconteça sem confirmação manual. **Cuidado para não destruir recursos acidentalmente.**
 
+## Formatando os arquivos
+
+O comando `terraform fmt -recursive` formata os arquivos utilizados no terraform
+
+```bash
+terraform fmt -recursive
+```
+
+## Exibir o estado atual do Terraform 
+
+O comando `terraform show` é utilizado no Terraform para exibir o estado atual de uma infraestrutura gerida pelo Terraform.
+
+```bash
+terraform show 
+```
+
+Em formato `json`
+
+```bash
+terraform show json
+```
