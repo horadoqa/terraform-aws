@@ -85,3 +85,37 @@ Acessando o endereço: `http://<IP PÚBLICO AWS>`
 <div align="center">
     <img src="./images/horadoqa.png" alt="Hora do QA">
 </div>
+
+## Como Contribuir
+
+Se você deseja contribuir para este projeto, siga as etapas abaixo:
+
+1. **Fork o repositório**:
+   - Clique no botão "Fork" no canto superior direito da página do projeto no GitHub.
+
+2. **Clone o repositório**:
+   - Clone o seu repositório para a sua máquina local.
+
+   ```bash
+   git clone https://github.com/seu-usuario/hora-do-qa.git
+   ```
+
+3. **Faça suas alterações**:
+   - Crie uma nova branch para as suas alterações:
+
+   ```bash
+   git checkout -b minha-nova-funcionalidade
+   ```
+
+4. **Suba suas alterações**:
+   - Depois de concluir suas alterações, faça commit e envie-as para o repositório remoto.
+
+   ```bash
+   git add .
+   git commit -m "Adiciona nova funcionalidade"
+   git push origin minha-nova-funcionalidade
+   ```
+
+5. **Abra um Pull Request**:
+   - Vá até o seu repositório no GitHub e clique em "New Pull Request" para enviar suas alterações para o repositório original.
+
